@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DiceRoller()
+                    DiceRollerApp()
                 }
             }
         }
@@ -38,7 +38,7 @@ fun DiceWithButtonAndImage() {
     showSystemUi = true
 )
 @Composable
-fun DiceRoller() {
+fun DiceRollerApp() {
 
 }
 
