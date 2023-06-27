@@ -4,9 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.andrograf.diceroller.ui.theme.DiceRollerTheme
@@ -36,7 +38,10 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
 )
 @Composable
 fun DiceRollerApp() {
-    DiceWithButtonAndImage(modifier = Modifier.fillMaxSize())
+    DiceWithButtonAndImage(modifier = Modifier
+        .fillMaxSize()
+        .wrapContentSize(Alignment.Center)
+    )
 }
 
 
