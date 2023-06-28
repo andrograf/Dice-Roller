@@ -11,7 +11,7 @@ This app is perfect for board games, role-playing games, or any other activity t
 - Clean and intuitive user interface built with Jetpack Compose.
 
 ## Screenshots
-![Dice Roller App Screenshot](path/to/screenshot.png)
+![Dice Roller App Screenshot](dice_roller_screenshot.png)
 
 ## Requirements
 Android device running Android 8.1 (Oreo) or above.
