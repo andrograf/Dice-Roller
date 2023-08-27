@@ -42,9 +42,15 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/**
+ * represents the UI components of the layout
+ * and also holds the button-click and image-display logic
+ */
 @Composable
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
+    // create a delegate
     var result by remember { mutableStateOf(1) }
+    // on recomposition, assign an image resource
     val imageResource = when(result){
         1 -> (R.drawable.dice_1)
         2 -> (R.drawable.dice_2)
@@ -53,6 +59,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
         5 -> (R.drawable.dice_5)
         else -> (R.drawable.dice_6)
     }
+    // composable layout
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -62,6 +69,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
             contentDescription = result.toString()
         )
         Spacer(modifier = Modifier.height(16.dp))
+        // on event, button assign a random number to observable
         Button(
             onClick = { result = (1..6).random() }
         ) {
@@ -70,12 +78,16 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
     }
 }
 
+/**
+ * represents the application
+ */
 @Preview(
     showBackground = true,
     showSystemUi = true
 )
 @Composable
 fun DiceRollerApp() {
+    // set app to fullscreen and align center
     DiceWithButtonAndImage(modifier = Modifier
         .fillMaxSize()
         .wrapContentSize(Alignment.Center)
